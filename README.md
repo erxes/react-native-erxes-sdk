@@ -17,7 +17,7 @@ erxes is a free and open fair-code licensed all-in-one growth marketing & manage
 ## Documentation
 
 * <a href="https://github.com/erxes/react-native-erxes-sdk/wiki/Requirement">Requirement</a>
-* <a href="https://github.com/erxes/react-native-erxes-sdk/wiki/Installation-with-Swift">Installation Guide</a>
+* <a href="https://github.com/erxes/react-native-erxes-sdk/wiki/Installation">Installation Guide</a>
 
 
 ## Deployment
