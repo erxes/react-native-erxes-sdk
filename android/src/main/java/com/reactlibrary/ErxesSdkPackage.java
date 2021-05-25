@@ -1,5 +1,6 @@
 package com.reactlibrary;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -12,12 +13,15 @@ import com.facebook.react.bridge.JavaScriptModule;
 
 public class ErxesSdkPackage implements ReactPackage {
     @Override
-    public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new ErxesSdkModule(reactContext));
+    public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
+        return Collections.emptyList();
     }
 
     @Override
-    public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Collections.emptyList();
+    public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
+        List<NativeModule> modules = new ArrayList<>();
+        modules.add(new ErxesSdkModule(reactContext));
+        modules.add(new ErxesEventEmitter(reactContext));
+        return modules;
     }
 }

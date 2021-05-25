@@ -1,7 +1,7 @@
 {
   "name": "react-native-erxes-sdk",
   "title": "React Native Erxes Sdk",
-  "version": "0.20.0",
+  "version": "0.20.1",
   "description": "TODO",
   "main": "index.js",
   "files": [
@@ -20,11 +20,14 @@
     "baseUrl": "https://github.com/erxes/react-native-erxes-sdk"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "erxes",
+    "RNerxes",
+    "react-native-erxes-sdk"
   ],
   "author": {
     "name": "orshih",
-    "username":"orshih",
+    "username": "orshih",
     "email": "orshih943@gmail.com"
   },
   "license": "MIT",
@@ -35,7 +38,7 @@
     "react-native": ">=0.60.0-rc.0 <1.0.x"
   },
   "devDependencies": {
-    "react": "^16.9.0",
-    "react-native": "^0.61.5"
+    "react": "17.0.1",
+    "react-native": "0.64.1"
   }
 }
