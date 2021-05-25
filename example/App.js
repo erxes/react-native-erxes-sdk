@@ -8,8 +8,14 @@
  * https://github.com/facebook/react-native
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import ErxesSdk from 'react-native-erxes-sdk';
 
 export default class App extends Component {
@@ -32,6 +38,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => {
+            console.log('asdsd');
             this.go();
           }}>
           <Text style={styles.welcome}>Test it</Text>
@@ -46,7 +53,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'white',
   },
   welcome: {
     fontSize: 20,
