@@ -22,14 +22,14 @@ import ErxesSdk from 'react-native-erxes-sdk';
 export default class App extends Component {
   componentDidMount() {}
   test = () => {
-    ErxesSdk.init('apiHost', 'branCode');
+    ErxesSdk.init('https://api.office.erxes.io', '5fkS4v');
 
     ErxesSdk.start();
   };
 
   testWithData = () => {
-    ErxesSdk.init('apiHost', 'branCode');
-    let custom = { email: 'example@gmail.com', other: 'otherTest' };
+    ErxesSdk.init('https://api.office.erxes.io', '5fkS4v');
+    let custom = { email: 'itgel.g@nmtec.co', other: 'otherTest' };
 
     ErxesSdk.startWithData(JSON.stringify(custom));
   };

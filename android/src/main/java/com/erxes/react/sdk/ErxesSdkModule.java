@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.erxes.react.sdk;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -38,14 +38,14 @@ public class ErxesSdkModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void start() {
-        if(config!=null)
+        if(config != null)
         config.Start();
     }
 
     @ReactMethod
     public void startWithData(String jsonString ) {
-        if(config!=null){
-            // config.Start("info@gmail.com",  "88998899",jsonString);
+        if(config != null){
+            config.Start(jsonString);
         }
     }
 }

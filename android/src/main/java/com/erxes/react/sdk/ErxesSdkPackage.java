@@ -1,4 +1,4 @@
-package com.reactlibrary;
+package com.erxes.react.sdk;
 
 import java.util.ArrayList;
 import java.util.Arrays;

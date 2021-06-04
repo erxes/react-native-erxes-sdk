@@ -73,7 +73,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    implementation 'com.github.erxes:erxes-android-sdk:0.20.5'
+    implementation 'com.github.erxes:erxes-android-sdk:0.20.6'
 }
 
 def configureReactNativePom(def pom) {
@@ -83,7 +83,7 @@ def configureReactNativePom(def pom) {
         name packageJson.title
         artifactId packageJson.name
         version = packageJson.version
-        group = "com.reactlibrary"
+        group = "com.erxes.react.sdk"
         description packageJson.description
         url packageJson.repository.baseUrl
 
