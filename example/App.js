@@ -15,34 +15,42 @@ import {
   Text,
   View,
   TouchableOpacity,
+  Button,
 } from 'react-native';
 import ErxesSdk from 'react-native-erxes-sdk';
 
 export default class App extends Component {
-  componentDidMount() {
-    //https://api.office.erxes.io
-    //gumQ2P
-    ErxesSdk.init('https://api.office.erxes.io', 'gumQ2P');
-    // ErxesLibrary.init('https://testingbro.app.erxes.io/', 'CRxbqw');
-    // ErxesLibrary.initSaas('testingbro', 'CRxbqw');
-    // ErxesLibrary.initSaas(argum)
-    // testingbro
-    // https://testingbro.app.erxes.io/api/
-  }
-  go = () => {
+  componentDidMount() {}
+  test = () => {
+    ErxesSdk.init('apiHost', 'branCode');
+
     ErxesSdk.start();
+  };
+
+  testWithData = () => {
+    ErxesSdk.init('apiHost', 'branCode');
+    let custom = { email: 'example@gmail.com', other: 'otherTest' };
+
+    ErxesSdk.startWithData(JSON.stringify(custom));
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity
+        <View style={{ marginBottom: 20 }}>
+          <Button
+            title="Test it"
+            onPress={() => {
+              this.test();
+            }}
+          />
+        </View>
+        <Button
+          title="Test it with customData"
           onPress={() => {
-            console.log('asdsd');
-            this.go();
-          }}>
-          <Text style={styles.welcome}>Test it</Text>
-        </TouchableOpacity>
+            this.testWithData();
+          }}
+        />
       </View>
     );
   }
