@@ -1,11 +1,11 @@
 package com.erxes.react.sdk;
 
+import android.util.Log;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 import com.newmedia.erxeslibrary.configuration.Config;
-import org.json.JSONObject;
 
 public class ErxesSdkModule extends ReactContextBaseJavaModule {
 
@@ -23,29 +23,31 @@ public class ErxesSdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void init(String apihost,String brandid) {
-        config = new Config.Builder(brandid)
-               .setApiHost(apihost)
-                .build(reactContext);
-    }
-
-    @ReactMethod
-    public void initSaas(String companyName,String brandid) {
-        config = new Config.Builder(brandid)
-                .setOrganizationName(companyName)
+    public void init(
+            String brandId,
+            String apiHost,
+            String organizationName,
+            String email,
+            String phone,
+            String data,
+            String companyData,
+            String code
+    ) {
+        config = new Config
+                .Builder(brandId)
+                .setApiHost(apiHost)
+                .setOrganizationName(organizationName)
+                .setEmail(email)
+                .setPhone(phone)
+                .setData(data)
+                .setCompanyData(companyData)
+                .setCode(code)
                 .build(reactContext);
     }
 
     @ReactMethod
     public void start() {
-        if(config != null)
-        config.Start();
-    }
-
-    @ReactMethod
-    public void startWithData(String jsonString ) {
-        if(config != null){
-            config.Start(jsonString);
-        }
+        if (config != null)
+            config.Start();
     }
 }

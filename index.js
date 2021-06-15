@@ -5,20 +5,35 @@ const { ErxesSdk } = NativeModules;
 export default class Erxes {
     /**
      * Initial opensource version.
-     * @param url The url of api.
      * @param brandId The brandId.
+     * @param apiHost The url of api for opensource version.
+     * @param organizationName The organization name for saas version.
+     * @param email The customer email.
+     * @param phone The customer phone.
+     * @param companyData The company custom data.
+     * @param data The custom data.
+     * @param code The code.
      */
-    static init(url, brandId) {
-        ErxesSdk.init(url, brandId);
-    }
-
-    /**
-     * Initial saas version.
-     * @param companyName The organization name.
-     * @param brandId The organization brandId.
-     */
-    static initSaas(companyName, brandId) {
-        ErxesSdk.initSaas(companyName, brandId);
+    static init(
+        brandId,
+        apiHost,
+        organizationName,
+        email,
+        phone,
+        data,
+        companyData,
+        code
+    ) {
+        ErxesSdk.init(
+            brandId,
+            apiHost,
+            organizationName,
+            email,
+            phone,
+            data,
+            companyData,
+            code
+        );
     }
 
     /**
@@ -26,13 +41,5 @@ export default class Erxes {
      */
     static start() {
         ErxesSdk.start();
-    }
-
-    /**
-     * Start sdk with data.
-     * @param customData The custom jsonString data.
-     */
-    static startWithData(customData) {
-        ErxesSdk.startWithData(customData);
     }
 }
