@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   # s.static_framework = true
   s.dependency "React"
-  s.dependency "ErxesSDK", "~> 0.20.1"
+  s.dependency "ErxesSDK", "~> 0.20.4"
   # ...
   # s.dependency "..."
 end
